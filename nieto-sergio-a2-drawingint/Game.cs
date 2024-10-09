@@ -82,6 +82,14 @@ namespace Game10003
                 Draw.Rectangle(rectPositionsX[i], rectPositionsY[i], rectWidths[i], rectHeights[i]);
             }
 
+            // Draw a triangle
+            Draw.FillColor = Color.DarkGray;
+            Draw.Triangle(150, 300, 375, 100, 605, 300);
+
+
+
+
+
 
 
         }
