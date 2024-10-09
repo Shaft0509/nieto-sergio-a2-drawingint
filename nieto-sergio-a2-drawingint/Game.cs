@@ -40,13 +40,34 @@ namespace Game10003
 
         public void Update()
         {
-            
-          
+           
+            // Increment time for day and night switching
+            timeElapsed += Time.DeltaTime;
+            if (timeElapsed >= 5)
+            {
+                isDay = !isDay;
+                timeElapsed = 0;
+            }
+
+            // Set background and circle color based on day/night
+
+
+            Window.ClearBackground(isDay ? Color.White : Color.Blue);
+            Draw.FillColor = isDay ? Color.Yellow : Color.Gray;
+
+
+            // Move the circle left, reset to right when it is off the window/screen
+            circleX -= circleSpeed * Time.DeltaTime;
+            if (circleX < -50) circleX = 850;
+
+
+            // Draw the  circle
+            Draw.Circle(circleX, 100, 50);
 
 
 
-                       
- 
+
+
 
         }
     }
