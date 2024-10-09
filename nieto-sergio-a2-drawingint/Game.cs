@@ -65,7 +65,22 @@ namespace Game10003
             Draw.Circle(circleX, 100, 50);
 
 
+            // Rectangle positions and sizes
 
+            int[] rectPositionsX = { 0, 200, 250, 400, 300 };
+            int[] rectPositionsY = { 450, 300, 375, 375, 450 };
+            int[] rectWidths = { 800, 350, 100, 100, 150 };
+            int[] rectHeights = { 150, 280, 50, 50, 130 };
+
+
+            // Draw all rectangles
+         
+            
+            for (int i = 0; i < rectColors.Length; i++)
+            {
+                Draw.FillColor = rectColors[i];
+                Draw.Rectangle(rectPositionsX[i], rectPositionsY[i], rectWidths[i], rectHeights[i]);
+            }
 
 
 
